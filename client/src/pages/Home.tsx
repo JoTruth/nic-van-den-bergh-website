@@ -25,7 +25,15 @@ import {
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-hero-bg-QZxVJzQP6NfcFLbjytPTiW.webp";
 const FITNESS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-fitness-cgGquqNCgmisCnth34ZwpU.webp";
 const SPEAKING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-speaking-JeCysBgwZfWKqqX8y3g4dU.webp";
-const CEO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-ceo-csmTiJ5RbGE9JDhB2yERiD.webp";
+const CEO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-real-photo_ee779ef2.png";
+
+const navLinks = [
+  { label: "About", href: "#about" },
+  { label: "Story", href: "#story" },
+  { label: "Services", href: "#services" },
+  { label: "Speaking", href: "#speaking" },
+  { label: "Contact", href: "#contact" },
+];
 
 // Fade-up observer hook
 function useFadeUp() {
@@ -147,30 +155,31 @@ export default function Home() {
               Motivator &middot; Fitness Advocate &middot; CEO
             </p>
 
-            <h1
-              className="font-display font-800 text-white mb-6"
-              style={{
-                fontWeight: 800,
-                fontSize: "clamp(2.8rem, 7vw, 5.5rem)",
-                lineHeight: 1.05,
-                letterSpacing: "-0.02em",
-              }}
-            >
-              Two Heart Attacks.
-              <br />
-              <span style={{ color: "oklch(0.75 0.18 75)" }}>One Unstoppable</span>
-              <br />
-              Life.
-            </h1>
+              <h1
+                className="font-display text-white mb-6"
+                style={{
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: "clamp(3.5rem, 9vw, 7rem)",
+                  lineHeight: 1.0,
+                  letterSpacing: "0.03em",
+                  fontWeight: 400,
+                }}
+              >
+                Two Heart Attacks.
+                <br />
+                <span style={{ color: "oklch(0.75 0.18 75)" }}>One Unstoppable</span>
+                <br />
+                Life.
+              </h1>
 
-            <p
-              className="font-body text-lg md:text-xl mb-10 max-w-xl"
-              style={{ color: "oklch(0.85 0.01 255)", fontWeight: 300, lineHeight: 1.7 }}
-            >
-              South African CEO. Dubai-based. Fitness warrior. Nic van den Bergh
-              turned adversity into a blueprint for resilience — in business, in
-              health, and in life.
-            </p>
+              <p
+                className="font-body text-lg md:text-xl mb-10 max-w-xl"
+                style={{ color: "oklch(0.85 0.01 255)", fontWeight: 300, lineHeight: 1.7 }}
+              >
+                South African CEO. Dubai-based. Surfer. Father of two. Fly fisher.
+                Nic van den Bergh turned adversity into a blueprint for resilience
+                — in business, in health, and in life.
+              </p>
 
             <div className="flex flex-wrap gap-4">
               <a
@@ -277,12 +286,14 @@ export default function Home() {
             <div className="fade-up" style={{ transitionDelay: "0.15s" }}>
               <p className="section-label mb-4">About Nic</p>
               <h2
-                className="font-display font-800 mb-6"
+                className="font-display mb-6"
                 style={{
-                  fontWeight: 800,
-                  fontSize: "clamp(2rem, 4vw, 3rem)",
-                  lineHeight: 1.1,
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
+                  lineHeight: 1.0,
+                  letterSpacing: "0.03em",
                   color: "oklch(0.18 0.04 255)",
+                  fontWeight: 400,
                 }}
               >
                 CEO by Day.
@@ -294,22 +305,23 @@ export default function Home() {
                 style={{ color: "oklch(0.35 0.02 255)", lineHeight: 1.8, fontWeight: 400 }}
               >
                 Nic van den Bergh is a South African entrepreneur and business leader
-                who has built and scaled companies across multiple continents. Now
-                based in the UAE, he leads as CEO while simultaneously embarking on
-                one of the most personal journeys of his life — a complete physical
-                and mental transformation.
+                who has served as CMO for multiple companies before stepping into the
+                CEO role. Now based in the UAE, he leads with two decades of marketing
+                and growth strategy experience — and a life philosophy forged through
+                extraordinary personal challenge.
               </p>
               <p
                 className="font-body text-base mb-8"
                 style={{ color: "oklch(0.35 0.02 255)", lineHeight: 1.8, fontWeight: 400 }}
               >
-                After surviving two heart attacks, Nic chose not just to survive —
-                but to thrive. He turned a medical crisis into a catalyst for
-                extraordinary change, proving that the most powerful boardroom
-                decisions start with the ones you make about your own body and mind.
+                After surviving two heart attacks, Nic chose not just to survive but
+                to thrive. A surfer, fly fisher, and father of two, he brings the same
+                discipline and presence he finds in nature into the boardroom and onto
+                the coaching floor — proving that a full life and peak performance are
+                not competing goals.
               </p>
               <div className="flex flex-wrap gap-3">
-                {["Motivational Speaker", "Fitness Coach", "Business Strategist", "UAE-Based"].map((tag) => (
+                {["Motivational Speaker", "Fitness Coach", "Business Strategist", "Former CMO", "Surfer", "Father of Two", "Fly Fisher", "UAE-Based"].map((tag) => (
                   <span
                     key={tag}
                     className="px-4 py-2 text-xs font-body font-600 tracking-wide"
@@ -344,11 +356,13 @@ export default function Home() {
                 The Journey
               </p>
               <h2
-                className="font-display font-800 text-white mb-6"
+                className="font-display text-white mb-6"
                 style={{
-                  fontWeight: 800,
-                  fontSize: "clamp(2rem, 4vw, 3rem)",
-                  lineHeight: 1.1,
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
+                  lineHeight: 1.0,
+                  letterSpacing: "0.03em",
+                  fontWeight: 400,
                 }}
               >
                 From the Boardroom
@@ -442,19 +456,21 @@ export default function Home() {
         <div className="container">
           <div className="max-w-2xl mb-16 fade-up">
             <p className="section-label mb-4">What I Offer</p>
-            <h2
-              className="font-display font-800"
-              style={{
-                fontWeight: 800,
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-                lineHeight: 1.1,
-                color: "oklch(0.18 0.04 255)",
-              }}
-            >
-              Services Built for
-              <br />
-              <span style={{ color: "oklch(0.55 0.2 260)" }}>High-Performers</span>
-            </h2>
+              <h2
+                className="font-display"
+                style={{
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
+                  lineHeight: 1.0,
+                  letterSpacing: "0.03em",
+                  color: "oklch(0.18 0.04 255)",
+                  fontWeight: 400,
+                }}
+              >
+                Services Built for
+                <br />
+                <span style={{ color: "oklch(0.55 0.2 260)" }}>High-Performers</span>
+              </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" ref={servicesRef}>
@@ -617,12 +633,14 @@ export default function Home() {
             <div className="fade-up" style={{ transitionDelay: "0.15s" }}>
               <p className="section-label mb-4">Speaking</p>
               <h2
-                className="font-display font-800 mb-6"
+                className="font-display mb-6"
                 style={{
-                  fontWeight: 800,
-                  fontSize: "clamp(2rem, 4vw, 3rem)",
-                  lineHeight: 1.1,
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
+                  lineHeight: 1.0,
+                  letterSpacing: "0.03em",
                   color: "oklch(0.18 0.04 255)",
+                  fontWeight: 400,
                 }}
               >
                 A Story That
@@ -695,17 +713,19 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-16">
             <p className="section-label mb-4">Testimonials</p>
-            <h2
-              className="font-display font-800"
-              style={{
-                fontWeight: 800,
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-                lineHeight: 1.1,
-                color: "oklch(0.18 0.04 255)",
-              }}
-            >
-              What People Are Saying
-            </h2>
+              <h2
+                className="font-display"
+                style={{
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
+                  lineHeight: 1.0,
+                  letterSpacing: "0.03em",
+                  color: "oklch(0.18 0.04 255)",
+                  fontWeight: 400,
+                }}
+              >
+                What People Are Saying
+              </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -784,11 +804,13 @@ export default function Home() {
                 Get In Touch
               </p>
               <h2
-                className="font-display font-800 text-white mb-6"
+                className="font-display text-white mb-6"
                 style={{
-                  fontWeight: 800,
-                  fontSize: "clamp(2rem, 4vw, 3rem)",
-                  lineHeight: 1.1,
+                  fontFamily: "'Bebas Neue', sans-serif",
+                  fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
+                  lineHeight: 1.0,
+                  letterSpacing: "0.03em",
+                  fontWeight: 400,
                 }}
               >
                 Ready to Build
@@ -1032,12 +1054,12 @@ export default function Home() {
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex flex-col items-center md:items-start">
-              <span
-                className="font-display font-800 text-white text-lg"
-                style={{ fontWeight: 800 }}
-              >
-                NIC VAN DEN BERGH
-              </span>
+            <span
+              className="font-display text-white"
+              style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.4rem", letterSpacing: "0.05em", fontWeight: 400 }}
+            >
+              NIC VAN DEN BERGH
+            </span>
               <span
                 className="font-body text-xs tracking-widest uppercase"
                 style={{ color: "oklch(0.55 0.01 255)", fontWeight: 400 }}
@@ -1082,10 +1104,4 @@ export default function Home() {
   );
 }
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Story", href: "#story" },
-  { label: "Services", href: "#services" },
-  { label: "Speaking", href: "#speaking" },
-  { label: "Contact", href: "#contact" },
-];
+
