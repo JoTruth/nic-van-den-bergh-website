@@ -23,8 +23,10 @@ import {
 
 // Image CDN URLs
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-hero-bg-QZxVJzQP6NfcFLbjytPTiW.webp";
-const FITNESS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-fitness-cgGquqNCgmisCnth34ZwpU.webp";
-const SPEAKING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-speaking-JeCysBgwZfWKqqX8y3g4dU.webp";
+const FITNESS_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-gym-real_d7504cba.png";
+const SPEAKING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-speaking-real_977aa39a.png";
+const SURFING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-surfing-real_9df8ee4a.png";
+const FLYFISHING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-flyfishing-real_a70d5d87.png";
 const CEO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663049677144/F6hhhn4AdQ5atnoJJb572Q/nic-real-photo_ee779ef2.png";
 
 const navLinks = [
@@ -152,7 +154,7 @@ export default function Home() {
               className="section-label mb-6"
               style={{ color: "oklch(0.75 0.18 75)", animationDelay: "0s" }}
             >
-              Motivator &middot; Fitness Advocate &middot; CEO
+              My name is Nic &middot; South African &middot; Dubai-based &middot; CEO
             </p>
 
               <h1
@@ -165,20 +167,20 @@ export default function Home() {
                   fontWeight: 400,
                 }}
               >
-                Two Heart Attacks.
+                I Survived
                 <br />
-                <span style={{ color: "oklch(0.75 0.18 75)" }}>One Unstoppable</span>
+                <span style={{ color: "oklch(0.75 0.18 75)" }}>Two Heart Attacks.</span>
                 <br />
-                Life.
+                Then I Started Living.
               </h1>
 
               <p
                 className="font-body text-lg md:text-xl mb-10 max-w-xl"
                 style={{ color: "oklch(0.85 0.01 255)", fontWeight: 300, lineHeight: 1.7 }}
               >
-                South African CEO. Dubai-based. Surfer. Father of two. Fly fisher.
-                Nic van den Bergh turned adversity into a blueprint for resilience
-                — in business, in health, and in life.
+                I'm not a fitness guru. I'm not a life coach with all the answers.
+                I'm a CEO, a dad, a surfer, and a guy who nearly died twice
+                and decided that was the best thing that ever happened to him.
               </p>
 
             <div className="flex flex-wrap gap-4">
@@ -198,7 +200,7 @@ export default function Home() {
                   (e.currentTarget as HTMLElement).style.background = "oklch(0.75 0.18 75)";
                 }}
               >
-                Read My Story <ArrowRight size={16} />
+                Hear My Story <ArrowRight size={16} />
               </a>
               <a
                 href="#services"
@@ -218,7 +220,7 @@ export default function Home() {
                   (e.currentTarget as HTMLElement).style.color = "white";
                 }}
               >
-                Work With Me
+                Let's Work Together
               </a>
             </div>
           </div>
@@ -284,7 +286,7 @@ export default function Home() {
 
             {/* Text */}
             <div className="fade-up" style={{ transitionDelay: "0.15s" }}>
-              <p className="section-label mb-4">About Nic</p>
+              <p className="section-label mb-4">About Me</p>
               <h2
                 className="font-display mb-6"
                 style={{
@@ -298,27 +300,27 @@ export default function Home() {
               >
                 CEO by Day.
                 <br />
-                <span style={{ color: "oklch(0.55 0.2 260)" }}>Athlete by Choice.</span>
+                <span style={{ color: "oklch(0.55 0.2 260)" }}>Healthy by Choice.</span>
               </h2>
               <p
                 className="font-body text-base mb-5"
                 style={{ color: "oklch(0.35 0.02 255)", lineHeight: 1.8, fontWeight: 400 }}
               >
-                Nic van den Bergh is a South African entrepreneur and business leader
-                who has served as CMO for multiple companies before stepping into the
-                CEO role. Now based in the UAE, he leads with two decades of marketing
-                and growth strategy experience — and a life philosophy forged through
-                extraordinary personal challenge.
+                I've spent over two decades in business — from CMO roles across multiple
+                companies to running my own as CEO. I've built teams, launched brands,
+                and navigated markets across South Africa, Europe, and the UAE. I know
+                what it takes to grow a business. What I didn't always know was how to
+                take care of the person running it.
               </p>
               <p
                 className="font-body text-base mb-8"
                 style={{ color: "oklch(0.35 0.02 255)", lineHeight: 1.8, fontWeight: 400 }}
               >
-                After surviving two heart attacks, Nic chose not just to survive but
-                to thrive. A surfer, fly fisher, and father of two, he brings the same
-                discipline and presence he finds in nature into the boardroom and onto
-                the coaching floor — proving that a full life and peak performance are
-                not competing goals.
+                Two heart attacks changed everything. I stopped drinking. I started
+                training. I rebuilt my body and my mindset from scratch — not because
+                I wanted to be an athlete, but because I wanted to be alive and present
+                for my two kids. Today I surf, fly fish, and show up every single day
+                with more energy and clarity than I had in my thirties.
               </p>
               <div className="flex flex-wrap gap-3">
                 {["Motivational Speaker", "Fitness Coach", "Business Strategist", "Former CMO", "Surfer", "Father of Two", "Fly Fisher", "UAE-Based"].map((tag) => (
@@ -353,7 +355,7 @@ export default function Home() {
             {/* Text */}
             <div className="fade-up order-2 md:order-1">
               <p className="section-label mb-4" style={{ color: "oklch(0.75 0.18 75)" }}>
-                The Journey
+                My Story
               </p>
               <h2
                 className="font-display text-white mb-6"
@@ -365,24 +367,24 @@ export default function Home() {
                   fontWeight: 400,
                 }}
               >
-                From the Boardroom
+                I Didn't Change
                 <br />
-                <span style={{ color: "oklch(0.75 0.18 75)" }}>to the Finish Line</span>
+                <span style={{ color: "oklch(0.75 0.18 75)" }}>My Life. I Saved It.</span>
               </h2>
 
               <div className="space-y-6">
                 {[
                   {
                     title: "The Wake-Up Call",
-                    text: "Two heart attacks in the prime of his career forced Nic to confront a hard truth: success without health is not success at all. Most would slow down. Nic decided to rebuild.",
+                    text: "I was running a company, travelling constantly, drinking too much, and ignoring every signal my body was sending me. Then my heart stopped. Twice. That's not a metaphor. That's what happened. And lying in that hospital bed, I made a decision.",
                   },
                   {
-                    title: "The Transformation",
-                    text: "At 40+, Nic embarked on a rigorous fitness journey — training alongside athletes half his age, overhauling his nutrition, and rewiring his mindset. The boardroom discipline that built his companies became the foundation of his physical transformation.",
+                    title: "The Rebuild",
+                    text: "I quit alcohol. I started going to the gym — badly at first, honestly. I changed what I ate, how I slept, how I thought. I wasn't trying to become an athlete. I was trying to become a better dad, a clearer thinker, and a man who actually shows up.",
                   },
                   {
-                    title: "The Mission",
-                    text: "Today, Nic shares his story to help other high-performers realise that peak physical health and peak business performance are not competing goals — they are the same goal.",
+                    title: "Why I Share It",
+                    text: "Because I've sat in boardrooms with brilliant people who are slowly killing themselves the same way I was. If my story gives one person permission to change before they have to — that's worth everything.",
                   },
                 ].map(({ title, text }, i) => (
                   <div
@@ -427,7 +429,7 @@ export default function Home() {
                   className="font-display text-white"
                   style={{ fontWeight: 600, fontSize: "1.1rem", lineHeight: 1.5, fontStyle: "italic" }}
                 >
-                  "The strongest muscle you can train is the one between your ears."
+                  "I didn't need a near-death experience to change. But I needed two of them."
                 </p>
                 <p
                   className="font-body text-sm mt-2"
@@ -441,10 +443,10 @@ export default function Home() {
             {/* Image */}
             <div className="fade-up order-1 md:order-2" style={{ transitionDelay: "0.1s" }}>
               <img
-                src={FITNESS_IMG}
-                alt="Nic van den Bergh — Fitness journey in Dubai"
+                src={SURFING_IMG}
+                alt="Nic van den Bergh surfing"
                 className="w-full object-cover"
-                style={{ aspectRatio: "3/4", maxHeight: "600px" }}
+                style={{ aspectRatio: "3/4", maxHeight: "600px", objectPosition: "top" }}
               />
             </div>
           </div>
@@ -455,7 +457,7 @@ export default function Home() {
       <section id="services" className="py-24 bg-white" ref={servicesRef}>
         <div className="container">
           <div className="max-w-2xl mb-16 fade-up">
-            <p className="section-label mb-4">What I Offer</p>
+            <p className="section-label mb-4">How I Can Help</p>
               <h2
                 className="font-display"
                 style={{
@@ -467,9 +469,9 @@ export default function Home() {
                   fontWeight: 400,
                 }}
               >
-                Services Built for
+                I Work With
                 <br />
-                <span style={{ color: "oklch(0.55 0.2 260)" }}>High-Performers</span>
+                <span style={{ color: "oklch(0.55 0.2 260)" }}>People Ready to Change</span>
               </h2>
           </div>
 
@@ -479,7 +481,7 @@ export default function Home() {
                 icon: Heart,
                 title: "1-on-1 Coaching",
                 subtitle: "Fitness & Mindset",
-                desc: "Personalised fitness and mindset coaching for executives and entrepreneurs who want to perform at their peak — in the gym and in the boardroom.",
+                desc: "I work with you one-on-one to build a fitness and mindset routine that fits your life as a busy professional. No fluff. No generic plans. Just honest, practical work.",
                 features: ["Custom training plans", "Nutrition guidance", "Mindset frameworks", "Weekly accountability"],
                 color: "oklch(0.55 0.2 260)",
               },
@@ -487,7 +489,7 @@ export default function Home() {
                 icon: TrendingUp,
                 title: "Business Consulting",
                 subtitle: "Growth Strategy",
-                desc: "Strategic business growth consulting drawing on 20+ years of building and scaling companies across South Africa, Europe, and the UAE.",
+                desc: "I've been in the room where the hard calls get made. I bring 20+ years of real-world CMO and CEO experience to help you grow smarter, not just harder.",
                 features: ["Growth strategy", "Leadership development", "Market expansion", "Executive coaching"],
                 color: "oklch(0.75 0.18 75)",
               },
@@ -495,7 +497,7 @@ export default function Home() {
                 icon: Mic2,
                 title: "Speaking",
                 subtitle: "Keynotes & Events",
-                desc: "Inspiring keynotes on resilience, the intersection of physical and business performance, and building an unstoppable mindset after adversity.",
+                desc: "I don't do motivational fluff. I tell you exactly what happened to me and what I did about it. If that moves you to act, then we've both done our job.",
                 features: ["Corporate keynotes", "Conference talks", "Workshops", "Panel discussions"],
                 color: "oklch(0.55 0.2 260)",
               },
@@ -503,7 +505,7 @@ export default function Home() {
                 icon: Dumbbell,
                 title: "Online Programs",
                 subtitle: "Fitness & Mindset",
-                desc: "Structured online programs designed for busy professionals who want to transform their health without sacrificing their career momentum.",
+                desc: "Can't do 1-on-1 yet? My online programs give you the same frameworks I used to rebuild my health — structured, honest, and built for people with real lives.",
                 features: ["Video program library", "Community access", "Monthly challenges", "Progress tracking"],
                 color: "oklch(0.75 0.18 75)",
               },
@@ -583,7 +585,7 @@ export default function Home() {
                     (e.currentTarget as HTMLElement).style.gap = "8px";
                   }}
                 >
-                  Enquire <ArrowRight size={14} />
+                  Get in Touch <ArrowRight size={14} />
                 </a>
               </div>
             ))}
@@ -606,7 +608,7 @@ export default function Home() {
                 src={SPEAKING_IMG}
                 alt="Nic van den Bergh speaking on stage"
                 className="w-full object-cover"
-                style={{ aspectRatio: "3/2" }}
+                style={{ aspectRatio: "3/2", objectPosition: "top" }}
               />
               <div
                 className="absolute bottom-0 left-0 right-0 p-6"
@@ -618,7 +620,7 @@ export default function Home() {
                   className="font-display text-white font-700 text-lg"
                   style={{ fontWeight: 700 }}
                 >
-                  Book Nic for Your Next Event
+                  Book Me for Your Next Event
                 </p>
                 <p
                   className="font-body text-sm"
@@ -631,7 +633,7 @@ export default function Home() {
 
             {/* Text */}
             <div className="fade-up" style={{ transitionDelay: "0.15s" }}>
-              <p className="section-label mb-4">Speaking</p>
+              <p className="section-label mb-4">On Stage</p>
               <h2
                 className="font-display mb-6"
                 style={{
@@ -643,26 +645,26 @@ export default function Home() {
                   fontWeight: 400,
                 }}
               >
-                A Story That
+                I Don't Do
                 <br />
-                <span style={{ color: "oklch(0.55 0.2 260)" }}>Moves Audiences</span>
+                <span style={{ color: "oklch(0.55 0.2 260)" }}>Motivational Fluff</span>
               </h2>
               <p
                 className="font-body text-base mb-8"
                 style={{ color: "oklch(0.35 0.02 255)", lineHeight: 1.8, fontWeight: 400 }}
               >
-                Nic's keynotes are not motivational fluff. They are hard-won lessons
-                from the intersection of near-death experience, executive leadership,
-                and athletic transformation. He speaks to what it truly means to
-                perform under pressure — and how to build a life that doesn't require
-                a crisis to change.
+                When I stand on a stage, I'm not reading from a script. I'm telling
+                you what it felt like to have my heart stop. What it took to rebuild.
+                What I wish someone had told me before I needed two wake-up calls.
+                My talks are raw, honest, and built to move people to action — not
+                just applause.
               </p>
 
               <div className="space-y-4 mb-8">
                 {[
-                  "Resilience & Reinvention — Turning adversity into advantage",
-                  "The CEO Athlete — Peak performance in business and fitness",
-                  "Heart of a Leader — Building teams that thrive under pressure",
+                  "Two Heart Attacks & A New Life — My personal story of reinvention",
+                  "Health is a Business Strategy — Why your body is your best asset",
+                  "The Sober CEO — What quitting alcohol did for my leadership",
                   "From Survive to Thrive — A framework for radical transformation",
                 ].map((topic) => (
                   <div key={topic} className="flex items-start gap-3">
@@ -701,9 +703,43 @@ export default function Home() {
                   (e.currentTarget as HTMLElement).style.background = "oklch(0.18 0.04 255)";
                 }}
               >
-                Book a Speaking Engagement <ArrowRight size={16} />
+                Book Me to Speak <ArrowRight size={16} />
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── LIFESTYLE STRIP ──────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ height: "340px" }}>
+        <img
+          src={FLYFISHING_IMG}
+          alt="Nic van den Bergh fly fishing"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "center 30%" }}
+        />
+        <div
+          className="absolute inset-0 flex items-center justify-center"
+          style={{ background: "oklch(0.18 0.04 255 / 0.55)" }}
+        >
+          <div className="text-center px-4">
+            <p
+              className="font-display text-white mb-2"
+              style={{
+                fontFamily: "'Bebas Neue', sans-serif",
+                fontSize: "clamp(2rem, 5vw, 3.5rem)",
+                letterSpacing: "0.04em",
+                fontWeight: 400,
+              }}
+            >
+              The river doesn't care about your title.
+            </p>
+            <p
+              className="font-body text-sm"
+              style={{ color: "oklch(0.85 0.01 255)", fontWeight: 300, letterSpacing: "0.05em" }}
+            >
+              Fly fishing taught me patience. The gym taught me discipline. My kids taught me everything else.
+            </p>
           </div>
         </div>
       </section>
@@ -801,7 +837,7 @@ export default function Home() {
             {/* Left */}
             <div className="fade-up">
               <p className="section-label mb-4" style={{ color: "oklch(0.75 0.18 75)" }}>
-                Get In Touch
+                Let's Talk
               </p>
               <h2
                 className="font-display text-white mb-6"
@@ -813,17 +849,17 @@ export default function Home() {
                   fontWeight: 400,
                 }}
               >
-                Ready to Build
+                If Something
                 <br />
-                <span style={{ color: "oklch(0.75 0.18 75)" }}>Something Great?</span>
+                <span style={{ color: "oklch(0.75 0.18 75)" }}>Here Resonated</span>
               </h2>
               <p
                 className="font-body text-base mb-10"
                 style={{ color: "oklch(0.75 0.01 255)", lineHeight: 1.8, fontWeight: 300 }}
               >
-                Whether you're looking for a speaking partner, a business growth
-                strategist, or a fitness coach who truly understands the executive
-                lifestyle — Nic is ready to connect.
+                Then let's have a conversation. I'm not hard to reach and I don't
+                have a gatekeeping team. If you want to work together, speak at your
+                event, or just ask a question — drop me a message. I read every one.
               </p>
 
               <div className="space-y-5">
@@ -933,7 +969,7 @@ export default function Home() {
                     className="font-body text-sm"
                     style={{ color: "oklch(0.75 0.01 255)", fontWeight: 300, lineHeight: 1.7 }}
                   >
-                    Thank you for reaching out. Nic will get back to you within 24 hours.
+                    Thank you for reaching out. I'll get back to you personally within 24 hours.
                   </p>
                 </div>
               ) : (
