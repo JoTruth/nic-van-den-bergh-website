@@ -167,9 +167,9 @@ export default function Home() {
                   fontWeight: 400,
                 }}
               >
-                I Survived
+                Diagnosed With
                 <br />
-                <span style={{ color: "oklch(0.75 0.18 75)" }}>Two Heart Attacks.</span>
+                <span style={{ color: "oklch(0.75 0.18 75)" }}>Cardiomyopathy.</span>
                 <br />
                 Then I Started Living.
               </h1>
@@ -179,8 +179,8 @@ export default function Home() {
                 style={{ color: "oklch(0.85 0.01 255)", fontWeight: 300, lineHeight: 1.7 }}
               >
                 I'm not a fitness guru. I'm not a life coach with all the answers.
-                I'm a CEO, a dad, a surfer, and a guy who nearly died twice
-                and decided that was the best thing that ever happened to him.
+                I'm a CEO, a dad, a surfer, and a guy who was diagnosed with
+                cardiomyopathy and decided that was the best thing that ever happened to him.
               </p>
 
             <div className="flex flex-wrap gap-4">
@@ -241,7 +241,7 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {[
-              { value: 2, suffix: "", label: "Heart Attacks Survived", icon: Heart },
+              { value: 1, suffix: "", label: "Cardiomyopathy Diagnosis", icon: Heart },
               { value: 20, suffix: "+", label: "Years in Business Leadership", icon: TrendingUp },
               { value: 500, suffix: "+", label: "Lives Impacted Through Coaching", icon: Dumbbell },
               { value: 3, suffix: "", label: "Countries Called Home", icon: MapPin },
@@ -316,11 +316,13 @@ export default function Home() {
                 className="font-body text-base mb-8"
                 style={{ color: "oklch(0.35 0.02 255)", lineHeight: 1.8, fontWeight: 400 }}
               >
-                Two heart attacks changed everything. I stopped drinking. I started
-                training. I rebuilt my body and my mindset from scratch — not because
-                I wanted to be an athlete, but because I wanted to be alive and present
-                for my two kids. Today I surf, fly fish, and show up every single day
-                with more energy and clarity than I had in my thirties.
+                A cardiomyopathy diagnosis changed everything. My heart muscle was
+                struggling — not from a sudden event, but from years of stress, poor
+                habits, and ignoring the signals. I stopped drinking. I started training.
+                I rebuilt my body and my mindset from scratch — not because I wanted
+                to be an athlete, but because I wanted to be alive and present for my
+                two kids. Today I surf, fly fish, and show up every single day with
+                more energy and clarity than I had in my thirties.
               </p>
               <div className="flex flex-wrap gap-3">
                 {["Motivational Speaker", "Fitness Coach", "Business Strategist", "Former CMO", "Surfer", "Father of Two", "Fly Fisher", "UAE-Based"].map((tag) => (
@@ -376,7 +378,7 @@ export default function Home() {
                 {[
                   {
                     title: "The Wake-Up Call",
-                    text: "I was running a company, travelling constantly, drinking too much, and ignoring every signal my body was sending me. Then my heart stopped. Twice. That's not a metaphor. That's what happened. And lying in that hospital bed, I made a decision.",
+                    text: "I was running a company, travelling constantly, drinking too much, and ignoring every signal my body was sending me. Then came the diagnosis: cardiomyopathy. My heart muscle was under serious strain. That's not a metaphor. That's what happened. And sitting in that doctor's office, I made a decision.",
                   },
                   {
                     title: "The Rebuild",
@@ -429,7 +431,7 @@ export default function Home() {
                   className="font-display text-white"
                   style={{ fontWeight: 600, fontSize: "1.1rem", lineHeight: 1.5, fontStyle: "italic" }}
                 >
-                  "I didn't need a near-death experience to change. But I needed two of them."
+                  "I didn't need a cardiomyopathy diagnosis to change. But apparently I did."
                 </p>
                 <p
                   className="font-body text-sm mt-2"
@@ -654,15 +656,16 @@ export default function Home() {
                 style={{ color: "oklch(0.35 0.02 255)", lineHeight: 1.8, fontWeight: 400 }}
               >
                 When I stand on a stage, I'm not reading from a script. I'm telling
-                you what it felt like to have my heart stop. What it took to rebuild.
-                What I wish someone had told me before I needed two wake-up calls.
+                you what it felt like to be told your heart is failing. What it took
+                to rebuild. What I wish someone had told me before I needed a
+                cardiomyopathy diagnosis to finally listen to my body.
                 My talks are raw, honest, and built to move people to action — not
                 just applause.
               </p>
 
               <div className="space-y-4 mb-8">
                 {[
-                  "Two Heart Attacks & A New Life — My personal story of reinvention",
+                  "Cardiomyopathy & A New Life — My personal story of reinvention",
                   "Health is a Business Strategy — Why your body is your best asset",
                   "The Sober CEO — What quitting alcohol did for my leadership",
                   "From Survive to Thrive — A framework for radical transformation",
