@@ -155,7 +155,7 @@ export default function Home() {
               className="section-label mb-6"
               style={{ color: "oklch(0.75 0.18 75)", animationDelay: "0s" }}
             >
-              My name is Nic &middot; South African &middot; Dubai-based &middot; CEO
+              My name is Nic &middot; South African &middot; Dubai-based &middot; CEO &middot; Turning 50 &amp; Just Getting Started
             </p>
 
               <h1
@@ -267,7 +267,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── ABOUT ────────────────────────────────────────── */}
+      {/* ── CORE VALUES STRIP ─────────────────────────── */}
+      <section
+        className="py-12"
+        style={{ background: "oklch(0.18 0.04 255)" }}
+      >
+        <div className="container">
+          <p
+            className="text-center font-body text-xs uppercase tracking-widest mb-8"
+            style={{ color: "oklch(0.55 0.2 260)", fontWeight: 600 }}
+          >
+            My Core Values
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+            {["Independent", "Pioneering", "Ambitious", "Responsible", "Consistent"].map((value, i) => (
+              <div key={value} className="flex items-center gap-3">
+                {i > 0 && (
+                  <div
+                    className="hidden md:block w-1 h-1 rounded-full"
+                    style={{ background: "oklch(0.75 0.18 75)" }}
+                  />
+                )}
+                <span
+                  style={{
+                    fontFamily: "'Bebas Neue', sans-serif",
+                    fontSize: "clamp(1.4rem, 3vw, 2rem)",
+                    letterSpacing: "0.08em",
+                    color: i === 2 ? "oklch(0.75 0.18 75)" : "white",
+                    fontWeight: 400,
+                  }}
+                >
+                  {value}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ABOUT ──────────────────────────────────── */}
       <section id="about" className="py-24 bg-white" ref={aboutRef}>
         <div className="container">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -316,7 +354,7 @@ export default function Home() {
                 A cardiomyopathy diagnosis changed everything. My heart muscle was struggling — not from a sudden event, but from years of stress, poor habits, and ignoring the signals. I stopped drinking. I started training. I rebuilt my body and my mindset from scratch — not because I wanted to be an athlete, but because I wanted to be alive and present for my two kids. Today I surf, fly fish, and show up every single day with more energy and clarity than I had in my thirties. Health by choice. Not by accident.
               </p>
               <div className="flex flex-wrap gap-3">
-                {["Motivational Speaker", "Fitness Coach", "Business Strategist", "MBA — Oxford Brookes", "Serial Entrepreneur", "Former CMO", "Surfer", "Father of Two", "Fly Fisher", "UAE-Based"].map((tag) => (
+                {["Motivational Speaker", "Fitness Coach", "Business Strategist", "MBA — Oxford Brookes", "Serial Entrepreneur", "Former CMO", "Surfer", "Father of Two", "Fly Fisher", "Guitarist", "Photographer", "UAE-Based"].map((tag) => (
                   <span
                     key={tag}
                     className="px-4 py-2 text-xs font-body font-600 tracking-wide"
@@ -737,12 +775,14 @@ export default function Home() {
 
             <div className="space-y-10">
               {[
-                { year: "1999", role: "Founder & Director", company: "Thunda.com", desc: "Built and sold one of South Africa's early digital platforms. 50,000 photographs a week. Sold the business." },
-                { year: "2003", role: "Publisher", company: "Media24", desc: "Oversaw Fin24 and Wheels24 business units. Managed budgets, advertising sales, and editorial strategy." },
-                { year: "2008", role: "Trading & Media Director", company: "Dentsu / Isobar", desc: "Built Isobar SA to R700M in turnover. Managed R2.3 billion in group media spend across South Africa and Sub-Saharan Africa." },
-                { year: "2017", role: "Head of Digital", company: "Virgin Money South Africa", desc: "Led end-to-end digital strategy, branding, and customer conversion. Integrated new technologies to drive acquisition and satisfaction." },
-                { year: "2020", role: "CMO", company: "Gameout Inc & DFY Studios", desc: "Chief Marketing Officer across two gaming companies operating in 152 countries, serving a 2.5M+ community. Pioneered Web3 and blockchain gaming experiences." },
-                { year: "Now", role: "CEO, Speaker & Coach", company: "Dubai, UAE", desc: "Running my own company, speaking on stages, coaching executives, and living proof that a cardiomyopathy diagnosis can be the best thing that ever happens to you." },
+                { year: "1997", role: "Marketing & Sales Manager", company: "Redline Products", desc: "Where it all started. Managing and developing the South African retail and wholesale market, building brands in local and international target markets." },
+                { year: "1999", role: "Founder & Director", company: "Thunda.com", desc: "Built and sold one of South Africa's first digital photo platforms. 50,000 photographs a week at peak. Sold the business. First taste of what building something from nothing feels like." },
+                { year: "2003", role: "Publisher", company: "Media24", desc: "Oversaw Fin24 and Wheels24 business units. Managed budgets, advertising sales, editorial strategy, and print relationships for combined marketing initiatives." },
+                { year: "2008", role: "Trading & Media Director", company: "Dentsu / Isobar", desc: "Built Isobar SA to R700M in turnover. Managed R2.3 billion in group media spend across South Africa and Sub-Saharan Africa. Led global business pitches." },
+                { year: "2015", role: "MD", company: "Clicks2Customers / NMPi", desc: "Led a team delivering data analytics, UX, web design, SEO, SEM, and social media solutions. Obsessed with quality and continuous evolution in digital." },
+                { year: "2017", role: "Head of Digital", company: "Virgin Money South Africa", desc: "End-to-end digital strategy, branding, campaign management, and customer conversion. Integrated new technologies to enhance user experience and drive acquisition." },
+                { year: "2020", role: "CMO", company: "Gameout Inc & DFY Studios", desc: "Chief Marketing Officer across two gaming companies in 152 countries, serving 2.5M+ gamers. Pioneered Web3 and blockchain gaming. Pushed every boundary." },
+                { year: "Now", role: "CEO, Speaker & Coach", company: "Macula Pty Ltd — Dubai, UAE", desc: "Running my own company. Speaking on stages. Coaching executives. Turning 50 and just getting started. Living proof that a cardiomyopathy diagnosis can be the best thing that ever happens to you." },
               ].map(({ year, role, company, desc }, i) => (
                 <div
                   key={year}
