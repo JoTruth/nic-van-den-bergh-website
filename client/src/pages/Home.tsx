@@ -34,6 +34,7 @@ const navLinks = [
   { label: "Story", href: "#story" },
   { label: "Services", href: "#services" },
   { label: "Speaking", href: "#speaking" },
+  { label: "Journey", href: "#journey" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -241,10 +242,10 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {[
-              { value: 1, suffix: "", label: "Cardiomyopathy Diagnosis", icon: Heart },
-              { value: 20, suffix: "+", label: "Years in Business Leadership", icon: TrendingUp },
-              { value: 500, suffix: "+", label: "Lives Impacted Through Coaching", icon: Dumbbell },
-              { value: 3, suffix: "", label: "Countries Called Home", icon: MapPin },
+              { value: 25, suffix: "+", label: "Years in Business", icon: TrendingUp },
+              { value: 2, suffix: ".3B", label: "Rands in Media Managed", icon: Dumbbell },
+              { value: 152, suffix: "", label: "Countries — Gaming Community Reach", icon: MapPin },
+              { value: 1, suffix: "", label: "Cardiomyopathy Diagnosis That Changed Everything", icon: Heart },
             ].map(({ value, suffix, label, icon: Icon }) => (
               <div key={label} className="flex flex-col items-center text-center gap-2">
                 <Icon size={24} style={{ color: "oklch(0.55 0.2 260)" }} />
@@ -306,26 +307,16 @@ export default function Home() {
                 className="font-body text-base mb-5"
                 style={{ color: "oklch(0.35 0.02 255)", lineHeight: 1.8, fontWeight: 400 }}
               >
-                I've spent over two decades in business — from CMO roles across multiple
-                companies to running my own as CEO. I've built teams, launched brands,
-                and navigated markets across South Africa, Europe, and the UAE. I know
-                what it takes to grow a business. What I didn't always know was how to
-                take care of the person running it.
+                I've spent 25+ years in business — starting as a founder (I built and sold Thunda.com back in 1999), then moving through roles at Media24, Dentsu, Virgin Money, and multiple CMO positions across gaming, fintech, and digital. I hold an MBA from Oxford Brookes in London. I've managed R2.3 billion in media spend, led teams across 152 countries, and helped build brands from zero to national prominence. What I didn't always know was how to take care of the person running it all.
               </p>
               <p
                 className="font-body text-base mb-8"
                 style={{ color: "oklch(0.35 0.02 255)", lineHeight: 1.8, fontWeight: 400 }}
               >
-                A cardiomyopathy diagnosis changed everything. My heart muscle was
-                struggling — not from a sudden event, but from years of stress, poor
-                habits, and ignoring the signals. I stopped drinking. I started training.
-                I rebuilt my body and my mindset from scratch — not because I wanted
-                to be an athlete, but because I wanted to be alive and present for my
-                two kids. Today I surf, fly fish, and show up every single day with
-                more energy and clarity than I had in my thirties.
+                A cardiomyopathy diagnosis changed everything. My heart muscle was struggling — not from a sudden event, but from years of stress, poor habits, and ignoring the signals. I stopped drinking. I started training. I rebuilt my body and my mindset from scratch — not because I wanted to be an athlete, but because I wanted to be alive and present for my two kids. Today I surf, fly fish, and show up every single day with more energy and clarity than I had in my thirties. Health by choice. Not by accident.
               </p>
               <div className="flex flex-wrap gap-3">
-                {["Motivational Speaker", "Fitness Coach", "Business Strategist", "Former CMO", "Surfer", "Father of Two", "Fly Fisher", "UAE-Based"].map((tag) => (
+                {["Motivational Speaker", "Fitness Coach", "Business Strategist", "MBA — Oxford Brookes", "Serial Entrepreneur", "Former CMO", "Surfer", "Father of Two", "Fly Fisher", "UAE-Based"].map((tag) => (
                   <span
                     key={tag}
                     className="px-4 py-2 text-xs font-body font-600 tracking-wide"
@@ -491,8 +482,8 @@ export default function Home() {
                 icon: TrendingUp,
                 title: "Business Consulting",
                 subtitle: "Growth Strategy",
-                desc: "I've been in the room where the hard calls get made. I bring 20+ years of real-world CMO and CEO experience to help you grow smarter, not just harder.",
-                features: ["Growth strategy", "Leadership development", "Market expansion", "Executive coaching"],
+                desc: "I've been in the room where the hard calls get made. From Media24 to Dentsu (R2.3B in media), Virgin Money to Web3 gaming across 152 countries — I bring 25+ years of real CMO and CEO experience to help you grow smarter, not just harder.",
+                features: ["Growth & brand strategy", "Leadership development", "Digital & Web3 marketing", "Executive coaching"],
                 color: "oklch(0.75 0.18 75)",
               },
               {
@@ -669,6 +660,8 @@ export default function Home() {
                   "Health is a Business Strategy — Why your body is your best asset",
                   "The Sober CEO — What quitting alcohol did for my leadership",
                   "From Survive to Thrive — A framework for radical transformation",
+                  "Building Brands at Scale — 25 years of lessons from R2.3B in media",
+                  "The Web3 Frontier — Marketing in the age of blockchain and gaming",
                 ].map((topic) => (
                   <div key={topic} className="flex items-start gap-3">
                     <div
@@ -708,6 +701,105 @@ export default function Home() {
               >
                 Book Me to Speak <ArrowRight size={16} />
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CAREER TIMELINE ──────────────────────────────── */}
+      <section id="journey" className="py-24" style={{ background: "oklch(0.96 0.005 255)" }}>
+        <div className="container">
+          <div className="text-center mb-16">
+            <p className="section-label mb-4">The Journey</p>
+            <h2
+              className="font-display"
+              style={{
+                fontFamily: "'Bebas Neue', sans-serif",
+                fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
+                lineHeight: 1.0,
+                letterSpacing: "0.03em",
+                color: "oklch(0.18 0.04 255)",
+                fontWeight: 400,
+              }}
+            >
+              25 Years.
+              <br />
+              <span style={{ color: "oklch(0.55 0.2 260)" }}>One Relentless Drive.</span>
+            </h2>
+          </div>
+
+          <div className="relative">
+            {/* Vertical line */}
+            <div
+              className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px hidden md:block"
+              style={{ background: "oklch(0.85 0.005 255)" }}
+            />
+
+            <div className="space-y-10">
+              {[
+                { year: "1999", role: "Founder & Director", company: "Thunda.com", desc: "Built and sold one of South Africa's early digital platforms. 50,000 photographs a week. Sold the business." },
+                { year: "2003", role: "Publisher", company: "Media24", desc: "Oversaw Fin24 and Wheels24 business units. Managed budgets, advertising sales, and editorial strategy." },
+                { year: "2008", role: "Trading & Media Director", company: "Dentsu / Isobar", desc: "Built Isobar SA to R700M in turnover. Managed R2.3 billion in group media spend across South Africa and Sub-Saharan Africa." },
+                { year: "2017", role: "Head of Digital", company: "Virgin Money South Africa", desc: "Led end-to-end digital strategy, branding, and customer conversion. Integrated new technologies to drive acquisition and satisfaction." },
+                { year: "2020", role: "CMO", company: "Gameout Inc & DFY Studios", desc: "Chief Marketing Officer across two gaming companies operating in 152 countries, serving a 2.5M+ community. Pioneered Web3 and blockchain gaming experiences." },
+                { year: "Now", role: "CEO, Speaker & Coach", company: "Dubai, UAE", desc: "Running my own company, speaking on stages, coaching executives, and living proof that a cardiomyopathy diagnosis can be the best thing that ever happens to you." },
+              ].map(({ year, role, company, desc }, i) => (
+                <div
+                  key={year}
+                  className={`flex flex-col md:flex-row gap-6 md:gap-0 items-start ${
+                    i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
+                >
+                  {/* Content block */}
+                  <div className={`w-full md:w-5/12 ${
+                    i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"
+                  }`}>
+                    <div
+                      className="inline-block px-3 py-1 text-xs font-body font-700 mb-3"
+                      style={{
+                        background: i === 5 ? "oklch(0.75 0.18 75)" : "oklch(0.55 0.2 260)",
+                        color: "white",
+                        fontWeight: 700,
+                        letterSpacing: "0.08em",
+                      }}
+                    >
+                      {year}
+                    </div>
+                    <h3
+                      className="font-display font-700 mb-1"
+                      style={{ fontWeight: 700, fontSize: "1.1rem", color: "oklch(0.18 0.04 255)" }}
+                    >
+                      {role}
+                    </h3>
+                    <p
+                      className="font-body text-xs font-600 uppercase tracking-widest mb-3"
+                      style={{ color: "oklch(0.55 0.2 260)", fontWeight: 600 }}
+                    >
+                      {company}
+                    </p>
+                    <p
+                      className="font-body text-sm"
+                      style={{ color: "oklch(0.45 0.02 255)", lineHeight: 1.7, fontWeight: 400 }}
+                    >
+                      {desc}
+                    </p>
+                  </div>
+
+                  {/* Centre dot */}
+                  <div className="hidden md:flex w-2/12 justify-center items-start pt-2">
+                    <div
+                      className="w-4 h-4 rounded-full border-2 z-10"
+                      style={{
+                        background: "white",
+                        borderColor: i === 5 ? "oklch(0.75 0.18 75)" : "oklch(0.55 0.2 260)",
+                      }}
+                    />
+                  </div>
+
+                  {/* Empty opposite side */}
+                  <div className="hidden md:block w-5/12" />
+                </div>
+              ))}
             </div>
           </div>
         </div>
