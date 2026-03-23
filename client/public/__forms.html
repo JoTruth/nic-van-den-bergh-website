@@ -1,0 +1,20 @@
+<!-- Static form skeleton for Netlify build-time form detection (SPA) -->
+<html>
+  <body>
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="name" />
+      <input name="email" />
+      <select name="service">
+        <option value="">Select a service</option>
+        <option value="coaching">1-on-1 Coaching</option>
+        <option value="consulting">Business Consulting</option>
+        <option value="speaking">Speaking Engagement</option>
+        <option value="online">Online Programs</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>
