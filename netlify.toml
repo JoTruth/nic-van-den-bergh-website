@@ -1,11 +1,6 @@
 [build]
-  command = "npx vite build"
-  publish = "dist/public"
+  command = "pnpm exec vite build"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
