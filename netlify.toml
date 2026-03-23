@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm run build"
+  command = "pnpm exec vite build"
   publish = "dist/public"
 
 [build.environment]
