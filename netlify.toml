@@ -1,0 +1,23 @@
+[build]
+  command = "pnpm run build"
+  publish = "dist/public"
+
+# Redirect www to apex domain (non-www)
+[[redirects]]
+  from = "https://www.nicvandenbergh.com/*"
+  to = "https://nicvandenbergh.com/:splat"
+  status = 301
+  force = true
+
+# SPA fallback - serve index.html for all routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
