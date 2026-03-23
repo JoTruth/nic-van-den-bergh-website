@@ -110,10 +110,34 @@ export default function Home() {
 
   const [formData, setFormData] = useState({ name: "", email: "", message: "", service: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    try {
+      const body = new URLSearchParams({
+        "form-name": "contact",
+        name: formData.name,
+        email: formData.email,
+        service: formData.service,
+        message: formData.message,
+      }).toString();
+
+      const res = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body,
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      }
+    } catch {
+      // silent fail — form still shows
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -1109,10 +1133,18 @@ export default function Home() {
                 </div>
               ) : (
                 <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
                   className="space-y-5 p-8"
                   style={{ background: "oklch(0.22 0.05 255)" }}
                 >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p style={{ display: "none" }}>
+                    <label>Don't fill this out: <input name="bot-field" /></label>
+                  </p>
                   <div className="grid grid-cols-2 gap-5">
                     <div>
                       <label
@@ -1123,6 +1155,7 @@ export default function Home() {
                       </label>
                       <input
                         type="text"
+                        name="name"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -1140,6 +1173,7 @@ export default function Home() {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -1158,6 +1192,7 @@ export default function Home() {
                       I'm interested in
                     </label>
                     <select
+                      name="service"
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                       className="w-full px-4 py-3 font-body text-sm bg-transparent border border-white/15 focus:border-amber-brand focus:outline-none transition-colors"
@@ -1181,6 +1216,7 @@ export default function Home() {
                     </label>
                     <textarea
                       rows={5}
+                      name="message"
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -1192,6 +1228,7 @@ export default function Home() {
 
                   <button
                     type="submit"
+                    disabled={submitting}
                     className="w-full py-4 font-display font-700 text-sm tracking-wide transition-all"
                     style={{
                       background: "oklch(0.75 0.18 75)",
@@ -1205,7 +1242,7 @@ export default function Home() {
                       (e.currentTarget as HTMLElement).style.background = "oklch(0.75 0.18 75)";
                     }}
                   >
-                    Send Message
+                    {submitting ? "Sending..." : "Send Message"}
                   </button>
                 </form>
               )}
