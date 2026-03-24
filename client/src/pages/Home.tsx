@@ -1,6 +1,6 @@
 /* ==========================================================
    VITAL FORCE — Home Page
-   Nic van den Bergh | Motivator · Fitness · Business
+   Nic van den Bergh | CEO · Marketing · Public Speaking
    Sections: Hero · Stats · About · Story · Services · Speaking · Contact · Footer
    ========================================================== */
 
@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import Navbar from "@/components/Navbar";
 import {
   Heart,
-  Dumbbell,
+  Megaphone,
   TrendingUp,
   Mic2,
   Mail,
@@ -203,8 +203,8 @@ export default function Home() {
                 className="font-body text-lg md:text-xl mb-10 max-w-xl"
                 style={{ color: "oklch(0.85 0.01 255)", fontWeight: 300, lineHeight: 1.7 }}
               >
-                I'm not a fitness guru. I'm not a life coach with all the answers.
-                I'm a CEO, a dad, a surfer, and a guy who was diagnosed with
+                I'm not a guru with all the answers. I'm a CEO, a marketer,
+                a public speaker, a dad, a surfer, and a guy who was diagnosed with
                 cardiomyopathy and decided that was the best thing that ever happened to him.
               </p>
 
@@ -267,7 +267,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {[
               { value: 25, suffix: "+", label: "Years in Business", icon: TrendingUp },
-              { value: 2, suffix: ".3B", label: "Rands in Media Managed", icon: Dumbbell },
+              { value: 2, suffix: ".3B", label: "Rands in Media Managed", icon: Megaphone },
               { value: 152, suffix: "", label: "Countries — Gaming Community Reach", icon: MapPin },
               { value: 1, suffix: "", label: "Cardiomyopathy Diagnosis That Changed Everything", icon: Heart },
             ].map(({ value, suffix, label, icon: Icon }) => (
@@ -363,7 +363,7 @@ export default function Home() {
               >
                 CEO by Day.
                 <br />
-                <span style={{ color: "oklch(0.55 0.2 260)" }}>Healthy by Choice.</span>
+                <span style={{ color: "oklch(0.55 0.2 260)" }}>Builder by Nature.</span>
               </h2>
               <p
                 className="font-body text-base mb-5"
@@ -378,7 +378,7 @@ export default function Home() {
                 A cardiomyopathy diagnosis changed everything. My heart muscle was struggling — not from a sudden event, but from years of stress, poor habits, and ignoring the signals. I stopped drinking. I started training. I rebuilt my body and my mindset from scratch — not because I wanted to be an athlete, but because I wanted to be alive and present for my two kids. Today I surf, fly fish, and show up every single day with more energy and clarity than I had in my thirties. Health by choice. Not by accident.
               </p>
               <div className="flex flex-wrap gap-3">
-                {["Motivational Speaker", "Fitness Coach", "Business Strategist", "MBA — Oxford Brookes", "Serial Entrepreneur", "Former CMO", "Surfer", "Father of Two", "Fly Fisher", "Guitarist", "Photographer", "UAE-Based"].map((tag) => (
+                {["Public Speaker", "Marketing Strategist", "Business Consultant", "MBA — Oxford Brookes", "Serial Entrepreneur", "Former CMO", "Surfer", "Father of Two", "Fly Fisher", "Guitarist", "Photographer", "UAE-Based"].map((tag) => (
                   <span
                     key={tag}
                     className="px-4 py-2 text-xs font-body font-600 tracking-wide"
@@ -526,20 +526,12 @@ export default function Home() {
               >
                 I Work With
                 <br />
-                <span style={{ color: "oklch(0.55 0.2 260)" }}>People Ready to Change</span>
+                <span style={{ color: "oklch(0.55 0.2 260)" }}>Leaders Ready to Grow</span>
               </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" ref={servicesRef}>
             {[
-              {
-                icon: Heart,
-                title: "1-on-1 Coaching",
-                subtitle: "Fitness & Mindset",
-                desc: "I work with you one-on-one to build a fitness and mindset routine that fits your life as a busy professional. No fluff. No generic plans. Just honest, practical work.",
-                features: ["Custom training plans", "Nutrition guidance", "Mindset frameworks", "Weekly accountability"],
-                color: "oklch(0.55 0.2 260)",
-              },
               {
                 icon: TrendingUp,
                 title: "Business Consulting",
@@ -549,20 +541,28 @@ export default function Home() {
                 color: "oklch(0.75 0.18 75)",
               },
               {
-                icon: Mic2,
-                title: "Speaking",
-                subtitle: "Keynotes & Events",
-                desc: "I don't do motivational fluff. I tell you exactly what happened to me and what I did about it. If that moves you to act, then we've both done our job.",
-                features: ["Corporate keynotes", "Conference talks", "Workshops", "Panel discussions"],
+                icon: Megaphone,
+                title: "Marketing Strategy",
+                subtitle: "Brand & Digital",
+                desc: "From building Isobar SA to R700M turnover to managing R2.3 billion in media spend — I know what it takes to build brands that cut through the noise. I help businesses craft marketing strategies that actually deliver results.",
+                features: ["Brand positioning & identity", "Digital marketing & paid media", "Web3 & blockchain marketing", "Go-to-market strategy"],
                 color: "oklch(0.55 0.2 260)",
               },
               {
-                icon: Dumbbell,
-                title: "Online Programs",
-                subtitle: "Fitness & Mindset",
-                desc: "Can't do 1-on-1 yet? My online programs give you the same frameworks I used to rebuild my health — structured, honest, and built for people with real lives.",
-                features: ["Video program library", "Community access", "Monthly challenges", "Progress tracking"],
+                icon: Mic2,
+                title: "Public Speaking",
+                subtitle: "Keynotes & Events",
+                desc: "I don't do motivational fluff. I tell you exactly what happened to me and what I did about it. My talks cover business, leadership, resilience, and the hard truths of building a life worth living.",
+                features: ["Corporate keynotes", "Conference talks", "Workshops & masterclasses", "Panel discussions"],
                 color: "oklch(0.75 0.18 75)",
+              },
+              {
+                icon: Heart,
+                title: "Executive Advisory",
+                subtitle: "Leadership & Resilience",
+                desc: "I work with CEOs and senior leaders who are ready to lead differently. No fluff — just honest, practical advice on leadership, decision-making, and building a business without burning out.",
+                features: ["C-suite advisory", "Leadership development", "Organisational strategy", "Resilience frameworks"],
+                color: "oklch(0.55 0.2 260)",
               },
             ].map(({ icon: Icon, title, subtitle, desc, features, color }, i) => (
               <div
@@ -710,7 +710,7 @@ export default function Home() {
               >
                 When I stand on a stage, I'm not reading from a script. I'm telling
                 you what it felt like to be told your heart is failing. What it took
-                to rebuild. What I wish someone had told me before I needed a
+                to rebuild — as a leader, a marketer, and a man. What I wish someone had told me before I needed a
                 cardiomyopathy diagnosis to finally listen to my body.
                 My talks are raw, honest, and built to move people to action — not
                 just applause.
@@ -719,11 +719,11 @@ export default function Home() {
               <div className="space-y-4 mb-8">
                 {[
                   "Cardiomyopathy & A New Life — My personal story of reinvention",
-                  "Health is a Business Strategy — Why your body is your best asset",
                   "The Sober CEO — What quitting alcohol did for my leadership",
-                  "From Survive to Thrive — A framework for radical transformation",
                   "Building Brands at Scale — 25 years of lessons from R2.3B in media",
                   "The Web3 Frontier — Marketing in the age of blockchain and gaming",
+                  "From Survive to Thrive — A framework for radical transformation",
+                  "Leading From the Front — What real leadership looks like under pressure",
                 ].map((topic) => (
                   <div key={topic} className="flex items-start gap-3">
                     <div
@@ -806,7 +806,7 @@ export default function Home() {
                 { year: "2015", role: "MD", company: "Clicks2Customers / NMPi", desc: "Led a team delivering data analytics, UX, web design, SEO, SEM, and social media solutions. Obsessed with quality and continuous evolution in digital." },
                 { year: "2017", role: "Head of Digital", company: "Virgin Money South Africa", desc: "End-to-end digital strategy, branding, campaign management, and customer conversion. Integrated new technologies to enhance user experience and drive acquisition." },
                 { year: "2020", role: "CMO", company: "Gameout Inc & DFY Studios", desc: "Chief Marketing Officer across two gaming companies in 152 countries, serving 2.5M+ gamers. Pioneered Web3 and blockchain gaming. Pushed every boundary." },
-                { year: "Now", role: "CEO, Speaker & Coach", company: "Macula Pty Ltd — Dubai, UAE", desc: "Running my own company. Speaking on stages. Coaching executives. Turning 50 and just getting started. Living proof that a cardiomyopathy diagnosis can be the best thing that ever happens to you." },
+                { year: "Now", role: "CEO", company: "BlockDAG Ltd — Dubai, UAE", desc: "Leading BlockDAG (blockdag.network) as CEO. Speaking on stages worldwide. Advising executives and building brands. Turning 50 and just getting started. Living proof that a cardiomyopathy diagnosis can be the best thing that ever happens to you." },
               ].map(({ year, role, company, desc }, i) => (
                 <div
                   key={year}
@@ -927,13 +927,13 @@ export default function Home() {
             {[
               {
                 quote:
-                  "Nic's story completely shifted my perspective on what's possible. After hearing him speak, I overhauled my fitness routine and my business strategy simultaneously. The results have been extraordinary.",
+                  "Nic's story completely shifted my perspective on what's possible. After hearing him speak, I overhauled my business strategy and my approach to leadership. The results have been extraordinary.",
                 name: "James Thornton",
                 title: "Managing Director, Dubai",
               },
               {
                 quote:
-                  "Working with Nic as a coach changed my life. He doesn't just give you a workout plan — he gives you a mindset upgrade. The discipline I've built in the gym has directly translated to how I lead my team.",
+                  "Working with Nic on our marketing strategy was a game-changer. He doesn't just give you a plan — he gives you a whole new way of thinking about growth. The clarity he brought to our brand positioning directly translated to how we compete in the market.",
                 name: "Sarah Al-Rashid",
                 title: "Entrepreneur & CEO, Abu Dhabi",
               },
@@ -1199,10 +1199,10 @@ export default function Home() {
                       style={{ color: formData.service ? "white" : "oklch(0.55 0.01 255)", fontWeight: 400 }}
                     >
                       <option value="" style={{ background: "oklch(0.22 0.05 255)" }}>Select a service</option>
-                      <option value="coaching" style={{ background: "oklch(0.22 0.05 255)" }}>1-on-1 Coaching</option>
                       <option value="consulting" style={{ background: "oklch(0.22 0.05 255)" }}>Business Consulting</option>
+                      <option value="marketing" style={{ background: "oklch(0.22 0.05 255)" }}>Marketing Strategy</option>
                       <option value="speaking" style={{ background: "oklch(0.22 0.05 255)" }}>Speaking Engagement</option>
-                      <option value="online" style={{ background: "oklch(0.22 0.05 255)" }}>Online Programs</option>
+                      <option value="advisory" style={{ background: "oklch(0.22 0.05 255)" }}>Executive Advisory</option>
                       <option value="other" style={{ background: "oklch(0.22 0.05 255)" }}>Other</option>
                     </select>
                   </div>
@@ -1272,7 +1272,7 @@ export default function Home() {
                 className="font-body text-xs tracking-widest uppercase"
                 style={{ color: "oklch(0.55 0.01 255)", fontWeight: 400 }}
               >
-                Motivator &middot; Fitness &middot; Business
+                CEO &middot; Marketing &middot; Public Speaking
               </span>
             </div>
 
